@@ -1,0 +1,14 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.banana" path="/org/gnome/shell/extensions/banana/">
+    <key name="show-script" type="b">
+      <default>false</default>
+      <summary>Show script at bottom of menu?</summary>
+      <description>If true, the (clickable) name of the executed script is shown at the bottom of the menu.</description>
+    </key>
+    <key name="terminal" type="s">
+      <default>'/usr/bin/gnome-terminal'</default>
+      <summary>Which terminal to use.</summary>
+      <description>The specified terminal is used to execute bash actions. The terminal must support the -e flag, in the same way as gnome-terminal does.</description>
+    </key>
+  </schema>
+</schemalist>

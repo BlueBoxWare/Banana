@@ -1,0 +1,13 @@
+{
+    "description": "Banana sized Gnome Shell plugins.",
+    "name": "Banana",
+    "shell-version": [
+        "3.26",
+        "3.28",
+        "3.30"
+    ],
+    "url": "https://github.com/blueboxware/banana",
+    "uuid": "banana@blueboxware.github.com",
+    "version": 2,
+    "settings-schema": "org.gnome.shell.extensions.banana"
+}
