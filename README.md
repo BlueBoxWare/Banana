@@ -18,7 +18,7 @@ supports the `-e` option in the same way as _gnome-terminal_ can be used.
 ### Actions on panel icons
 Actions on panel icons are specified the same way as for regular menu items and support the same options. Unlike Argos, Banana always runs the script when the panel icon is clicked and when the current active button has an action, this action is executed and no menu is shown. If you _do_ want a menu to be shown when a button with an action is clicked, use `showMenu=true`.
 
-Here is an example of a panel icon which will run top when clicked:
+Here is an example of a panel icon which will run `top` when clicked:
 
 ```bash
 #!/usr/bin/env bash
