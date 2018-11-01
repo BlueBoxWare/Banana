@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 
 #----------------------------------------------------------------------
-# Creates a 'frequent apps' menu.
+# Creates a 'frequent apps' menu. Bash version.
+#
+# Depends on busctl (systemd)
 #
 # Argos compatible
 #----------------------------------------------------------------------
 
-# CONFIGURATION
+#----------------------------------------------------------------------
+# Configuration
+#----------------------------------------------------------------------
 INCLUDE_FAVORITES=false
 NR_OF_ITEMS=10
 EXCLUDE_WINE=true # whether or not to exclude Wine apps
+#----------------------------------------------------------------------
 
 echo "| iconName=applications-other"
 echo "-----"
