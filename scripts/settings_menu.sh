@@ -13,7 +13,7 @@ echo "General | iconName=preferences-desktop bash=gnome-control-center terminal=
 
 function entry() {
   if [ -x "$(command -v "$1")" ]; then
-    echo "$2 | iconName=${3:-$1} bash=$1 terminal=false"
+    echo "$2 | iconName=${3:-$1} bash='${4:-$1}' terminal=false"
   fi
 }
 
@@ -26,6 +26,7 @@ entry "ibus-setup" "IBus"
 entry "gnome-session-properties" "Startup Apps" "system-run"
 entry "systemadm" "Systemd" "system-run"
 entry "gnome-software" "Software"
+entry "software-properties-gtk" "Software settings"
 entry "synaptic-pkexec" "Synaptic"
 entry "seahorse" "Passwords"
 entry "nvidia-settings" "NVidia settings"
@@ -33,7 +34,7 @@ entry "gufw" "Firewall"
 entry "gnome-nettool" "Nettool"
 entry "gnome-boxes" "Boxes"
 entry "gnome-logs" "Logs"
-echo "Updates | iconName=system-software-update bash='gnome-software --mode updates' terminal=false"
+entry "gnome-software" "Updates" "system-software-update" "gnome-software --mode updates"
 
 
 
