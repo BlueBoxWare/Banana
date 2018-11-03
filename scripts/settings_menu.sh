@@ -33,6 +33,7 @@ entry "gufw" "Firewall"
 entry "gnome-nettool" "Nettool"
 entry "gnome-boxes" "Boxes"
 entry "gnome-logs" "Logs"
+echo "Updates | iconName=system-software-update bash='gnome-software --mode updates' terminal=false"
 
 
 
