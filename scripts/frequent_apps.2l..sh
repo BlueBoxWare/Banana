@@ -3,8 +3,6 @@
 #----------------------------------------------------------------------
 # Creates a 'frequent apps' menu. Bash version.
 #
-# Depends on busctl (systemd)
-#
 # Argos compatible
 #----------------------------------------------------------------------
 
@@ -32,7 +30,7 @@ if [ "$FAVORITES" = "" ]; then
     FAVORITES="[]"
 fi
 
-busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s '
+dbus-send --session --print-reply --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'
     let s = "";
     let favorites = '"$FAVORITES"';
     let mostUsed = imports.gi.Shell.AppUsage.get_default().get_most_used("");
@@ -57,4 +55,4 @@ busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s '
         }
     }
     s;
-' | cut -d" " -f3-  | sed -r -e 's/\&/&amp;/g' -e 's/#N#/\n/g' -e 's/^(\\?")*//g' -e 's/(\n|\\?")*$//g' -e "s/#Q#/'/g" -e 's/#DQ#/"/g'
+' | tail -1 | sed -r -e 's/\s*string\s*""//' -e 's/\&/&amp;/g' -e 's/#N#/\n/g' -e 's/^(\\?")*//g' -e 's/(\n|\\?")*$//g' -e "s/#Q#/'/g" -e 's/#DQ#/"/g'

@@ -20,6 +20,9 @@ import re
 from pydbus import SessionBus
 from gi.repository import Gio
 
+print('| iconName=applications-other')
+print('-----')
+
 bus = SessionBus()
 shell = bus.get('org.gnome.Shell', '/org/gnome/Shell')
 
@@ -55,7 +58,4 @@ result = re.sub(r"#N#", "\n", shell.Eval('''
     s;
 ''')[1])
 
-
-print('| iconName=applications-other')
-print('-----')
 print(result[1:-2])
