@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 
 #----------------------------------------------------------------------
-# Moves the clock to the right.
 #
-# Rename to a filename consisting of a single space or something like
-# that to not have "move_clock ..." shown in the panel during the
-# time out: mv move_clock " "
+# Moves the clock to the right after the start of GNOME.
+#
 #----------------------------------------------------------------------
 
 echo " "
 
+exec 1>&-
+
 # Trying to move too soon doesn't work. How long we have to wait
 # is probably different on different systems and might need some
 # experimentation.
-sleep 1;
+sleep 5
+
 dbus-send --session --print-reply --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'
     // Code from Frippery Move Clock by rmyorston
     // https://extensions.gnome.org/extension/2/move-clock/
@@ -30,6 +31,8 @@ dbus-send --session --print-reply --type=method_call --dest=org.gnome.Shell /org
       }
     }
 ' > /dev/null
+
+exit 0
 
 
 
