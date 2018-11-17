@@ -17,7 +17,7 @@ function entry() {
   fi
 }
 
-entry "gnome-tweaks" "Tweaks"
+entry "gnome-tweaks" "Tweaks" "preferences-other"
 entry "dconf-editor" "Dconf editor"
 entry "gconf-editor" "Gconf editor"
 entry "pavucontrol" "Pulseaudio"

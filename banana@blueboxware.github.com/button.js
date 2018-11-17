@@ -198,6 +198,11 @@ var BananaButton = new Lang.Class({
       this._cycleTimeout = null;
     }
 
+    this.actor.visible = buttonLines.length > 0 || !dropdownMode;
+
+    if (!this.actor.visible)
+      return;
+
     if (buttonLines.length === 0) {
       this._lineView.setMarkup(
         GLib.markup_escape_text(this._file.get_basename(), -1)
