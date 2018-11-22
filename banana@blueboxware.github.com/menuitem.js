@@ -62,3 +62,5 @@ var BananaMenuItem = new Lang.Class({
     }
   }
 });
+
+/* vim:set et sw=2: */

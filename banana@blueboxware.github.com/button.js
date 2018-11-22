@@ -304,3 +304,5 @@ var BananaButton = new Lang.Class({
     }
   }
 });
+
+/* vim:set et sw=2: */

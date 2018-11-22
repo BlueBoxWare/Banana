@@ -121,3 +121,5 @@ function removeButtons() {
   }
   buttons = [];
 }
+
+/* vim:set et sw=2: */

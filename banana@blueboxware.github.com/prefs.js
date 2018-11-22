@@ -89,3 +89,5 @@ function buildPrefsWidget() {
 
   return widget;
 }
+
+/* vim:set et sw=2: */

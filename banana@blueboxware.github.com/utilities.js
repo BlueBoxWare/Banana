@@ -409,3 +409,5 @@ function getSettings() {
     settings_schema: schemaObj
   });
 }
+
+/* vim:set et sw=2: */

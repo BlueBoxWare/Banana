@@ -122,3 +122,5 @@ var BananaLineView = new Lang.Class({
     });
   }
 });
+
+/* vim:set et sw=2: */
