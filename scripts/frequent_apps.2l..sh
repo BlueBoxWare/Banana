@@ -10,8 +10,9 @@
 # Configuration
 #----------------------------------------------------------------------
 INCLUDE_FAVORITES=false
-NR_OF_ITEMS=10
+NR_OF_ITEMS=15
 EXCLUDE_WINE=true # whether or not to exclude Wine apps
+SORT=true # whether or not to sort by name instead of by priority
 #----------------------------------------------------------------------
 
 echo "| iconName=applications-other"
@@ -55,4 +56,4 @@ dbus-send --session --print-reply --type=method_call --dest=org.gnome.Shell /org
         }
     }
     s;
-' | tail -1 | sed -r -e 's/\s*string\s*""//' -e 's/\&/&amp;/g' -e 's/#N#/\n/g' -e 's/^(\\?")*//g' -e 's/(\n|\\?")*$//g' -e "s/#Q#/'/g" -e 's/#DQ#/"/g'
+' | tail -1 | sed -r -e 's/\s*string\s*""//' -e 's/\&/&amp;/g' -e 's/#N#/\n/g' -e 's/^(\\?")*//g' -e 's/(\n|\\?")*$//g' -e "s/#Q#/'/g" -e 's/#DQ#/"/g' | ( [ "$SORT" == "true" ] && sort || cat )

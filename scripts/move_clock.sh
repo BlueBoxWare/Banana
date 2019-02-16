@@ -13,7 +13,7 @@ exec 1>&-
 # Trying to move too soon doesn't work. How long we have to wait
 # is probably different on different systems and might need some
 # experimentation.
-sleep 5
+sleep 8
 
 dbus-send --session --print-reply --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'
     // Code from Frippery Move Clock by rmyorston
