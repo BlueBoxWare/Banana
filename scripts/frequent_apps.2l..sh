@@ -18,11 +18,6 @@ SORT=true # whether or not to sort by name instead of by priority
 echo "| iconName=applications-other"
 echo "-----"
 
-if [ "$ARGOS_MENU_OPEN" != "true" ]; then
-  echo "Loading..."
-  exit 0
-fi
-
 if [ "$INCLUDE_FAVORITES" = "false" ]; then
    FAVORITES=$(dconf read /org/gnome/shell/favorite-apps)
 fi
