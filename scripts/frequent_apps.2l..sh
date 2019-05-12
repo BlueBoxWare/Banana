@@ -52,3 +52,5 @@ dbus-send --session --print-reply --type=method_call --dest=org.gnome.Shell /org
     }
     s;
 ' | tail -1 | sed -r -e 's/\s*string\s*""//' -e 's/\&/&amp;/g' -e 's/#N#/\n/g' -e 's/^(\\?")*//g' -e 's/(\n|\\?")*$//g' -e "s/#Q#/'/g" -e 's/#DQ#/"/g' | ( [ "$SORT" == "true" ] && sort || cat )
+
+echo "Other... | bash='dbus-send --session --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.ShowApplications' terminal=false"
