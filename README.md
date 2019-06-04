@@ -47,4 +47,4 @@ fi
 The directory [`scripts`](scripts/) contains more scripts. If you like to use one of these scripts, put it in `~/.config/banana` and make it executable.
 
 ### Compatibility
-Most, if not all, Argos scripts should run correctly with Banana. It is also possible to have Argos and Banana installed and active at the same time. I don't know if Banana is compatible with Gnome 3.30, but I assume it is.
+Most, if not all, Argos scripts should run correctly with Banana. It is also possible to have Argos and Banana installed and active at the same time. I don't know if Banana is compatible with Gnome 3.30, but I assume it is. It is definitely **not compatible with Gnome 3.32.0**.
